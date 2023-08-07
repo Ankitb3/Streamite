@@ -32,7 +32,7 @@ const Toprated = () => {
         <h2>{highestRatingShow[0]?.show?.name}</h2>
         <p className="fs-4">{removetag}.</p>
         <p className="fs-4">
-          <span>Rating</span> -{highestRatingShow[0]?.show?.rating.average}{" "}
+          <span>Rating</span> -⭐⭐⭐⭐{highestRatingShow[0]?.show?.rating.average}{" "}
         </p>
 
         <p className="fs-4">
