@@ -1,8 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
-
+import "./Footer.css";
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-white" style={{ height: "30vh" }}>
+    <footer className="footer bg-black text-white footer_main">
       <Container>
         <Row className="fs-4">
           <Col xs={12} sm={4} className="text-center">
