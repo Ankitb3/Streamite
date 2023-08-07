@@ -4,7 +4,6 @@ import { useContext } from "react";
 import "./MovieCard.css";
 const MovieCard = () => {
   const { filterData } = useContext(Moviedata);
-  console.log(filterData);
 
   return (
     <>
@@ -42,8 +41,14 @@ const MovieCard = () => {
                   ? 2.2
                   : data.show.rating.average}{" "}
               </h4>
-              <h4>Time {data.show.schedule.time !== "" ? data.show.schedule.time : '00:00'}min</h4>
-              <button className="button-2">Watch More</button>
+              <h4>
+                Time{" "}
+                {data.show.schedule.time !== ""
+                  ? data.show.schedule.time
+                  : "00:00"}
+                min
+              </h4>
+              <button className="button-2">Watch</button>
             </Card.Body>
           </Card>
         ))}
