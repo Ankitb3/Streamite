@@ -32,7 +32,15 @@ const Toprated = () => {
         <h2>{highestRatingShow[0]?.show?.name}</h2>
         <p className="fs-4">{removetag}.</p>
         <p className="fs-4">
-          Rating -{highestRatingShow[0]?.show?.rating.average}{" "}
+          <span>Rating</span> -{highestRatingShow[0]?.show?.rating.average}{" "}
+        </p>
+
+        <p className="fs-4">
+          <span>Duration</span> -{highestRatingShow[0]?.show?.schedule.time}min
+        </p>
+
+        <p className="fs-4">
+          <span>genres</span> -{highestRatingShow[0]?.show?.genres.join(",")}
         </p>
         <button className="button-2 p-3">Watch</button>
       </div>
