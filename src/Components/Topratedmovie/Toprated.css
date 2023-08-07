@@ -1,0 +1,12 @@
+@media (min-width: 400px) and (max-width: 700px) {
+  .main_top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.main_top {
+  height: 90vh;
+  margin-top: 6rem;
+}
