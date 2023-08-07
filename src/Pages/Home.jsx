@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer/Footer";
 import MovieCard from "../Components/MovieCard/MovieCard";
 import Header from "../Components/Navbar/Navbar";
 import Slider from "../Components/Slider/Slider";
@@ -10,6 +11,7 @@ const Home = () => {
       <Slider/>
       <MovieCard/>
       <Toprated/>
+      <Footer/>
     </div>
   );
 };
