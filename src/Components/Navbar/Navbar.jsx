@@ -5,13 +5,12 @@ const Navbar = () => {
     <>
       <div className="main_nav">
         <div>
-          <h1> STREAMIT</h1>
+          <h1 style={{ textShadow: "4px 2px 2px #E40813" }}>STREAMIT</h1>
         </div>
         <div>
-            <SearchModel/>
+          <SearchModel />
         </div>
       </div>
-
     </>
   );
 };

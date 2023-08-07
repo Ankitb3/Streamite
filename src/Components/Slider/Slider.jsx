@@ -3,10 +3,8 @@ import { Container, Carousel } from "react-bootstrap";
 import { Moviedata } from "../Context/Context";
 import "./Slider.css";
 const MySlider = () => {
-  const { Allapidata } = useContext(Moviedata);
-  const filterData = Allapidata.filter((item) => {
-    return item.show.image !== null;
-  });
+  const { filterData } = useContext(Moviedata);
+ 
 
   return (
     <Container>

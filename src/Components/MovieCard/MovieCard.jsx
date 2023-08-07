@@ -42,7 +42,7 @@ const MovieCard = () => {
                   ? 2.2
                   : data.show.rating.average}{" "}
               </h4>
-              <h4>Time {data.show.schedule.time}min</h4>
+              <h4>Time {data.show.schedule.time !== "" ? data.show.schedule.time : '00:00'}min</h4>
               <button className="button-2">Watch More</button>
             </Card.Body>
           </Card>

@@ -4,7 +4,9 @@ import { createContext, useEffect, useState } from "react";
 export const Moviedata = createContext();
 const Context = ({ children }) => {
   const [Allapidata, setAllapidata] = useState([]);
-
+  const filterData = Allapidata.filter((item) => {
+    return item.show.image !== null;
+  });
   useEffect(() => {
     axios
       .get(import.meta.env.VITE_APP_PUBLIC_API_KEY)
@@ -16,7 +18,7 @@ const Context = ({ children }) => {
       });
   }, []);
   return (
-    <Moviedata.Provider value={{ Allapidata }}>{children}</Moviedata.Provider>
+    <Moviedata.Provider value={{ filterData }}>{children}</Moviedata.Provider>
   );
 };
 
