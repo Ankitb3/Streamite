@@ -1,4 +1,4 @@
-@media (min-width: 400px) and (max-width: 700px) {
+/* @media (min-width: 400px) and (max-width: 700px) {
     .footer_main {
       margin-top: 4rem;
     }
@@ -6,4 +6,17 @@
   
   .footer_main {
     margin-top: 8rem;
-  }
+  } */
+
+footer{
+  margin-top: 8rem;
+  padding: 3px;
+  color: white;
+  font-size: 20px;
+}
+.footer_div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}

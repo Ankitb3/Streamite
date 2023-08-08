@@ -11,7 +11,6 @@ const Toprated = () => {
   const removetag = highestRatingShow[0]?.show?.summary
     .replace(/<[^>]*>/g, "")
     .slice(0, 80);
-  console.log(removetag);
 
   return (
     <Container>
@@ -43,10 +42,7 @@ const Toprated = () => {
           <span>genres</span> -{highestRatingShow[0]?.show?.genres.join(",")}
         </p>
         <button className="button-2 p-3">
-          <Link
-            to={highestRatingShow[0]?.show?.url}
-            style={{ color: "black" }}
-          >
+          <Link to={highestRatingShow[0]?.show?.url} style={{ color: "black" }}>
             Play Now
           </Link>
         </button>

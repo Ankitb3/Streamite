@@ -1,0 +1,52 @@
+.Card_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+  }
+  .Card:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+  
+  .Card_main > h1 {
+    color: #e40813;
+    text-align: center;
+  }
+  
+  .Card_img {
+    max-height: 20rem;
+  }
+  
+  .rating {
+    background-color: #e40813;
+    border-radius: 50%;
+  }
+  
+  .rating {
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .button-2 {
+    color: #fff;
+    border: 1px solid #e40813;
+    background-image: -webkit-linear-gradient(
+      30deg,
+      #e40813 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(30deg, #e40813 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 700ms ease-in-out;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .button-2:hover {
+    background-position: 100%;
+    color: black;
+  }
+  

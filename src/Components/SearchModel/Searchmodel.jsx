@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import SearchIcon from "../../assets/searchicon.png";
 import { Form, FormControl } from "react-bootstrap";
+import { Moviedata } from "../Context/Context";
 
 function SearchModel() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const { setSearch, HandleSearch, show, handleShow, handleClose } =
+    useContext(Moviedata);
 
   return (
     <>
@@ -21,9 +20,18 @@ function SearchModel() {
         <Modal.Body>
           <Form>
             <Form.Group controlId="formSearch">
-              <FormControl type="text" placeholder="search here" />
+              <FormControl
+                type="text"
+                placeholder="search here"
+                onChange={(e) => setSearch(e.target.value)}
+              />
             </Form.Group>
-            <Button variant="primary" type="submit" className="m-2">
+            <Button
+              variant="primary"
+              type="submit"
+              className="m-2"
+              onClick={HandleSearch}
+            >
               Search
             </Button>
           </Form>
