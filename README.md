@@ -11,4 +11,4 @@ Currently, two official plugins are available:
 ## You can search movie on this app
 ## You can Book movie ticket on this app
 
-![Previvew Image](![Alt text](image.png))
+![Previvew Image]![Alt text](image-3.png)
