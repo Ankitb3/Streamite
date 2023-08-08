@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 const Toprated = () => {
   const { filterData } = useContext(Moviedata);
   const highestRatingShow = filterData.filter((item) => {
-    return item.show.rating.average > 8;
+    return item?.show?.rating.average > 8;
   });
-  console.log(highestRatingShow[0].show.url);
   const removetag = highestRatingShow[0]?.show?.summary
     .replace(/<[^>]*>/g, "")
     .slice(0, 80);
@@ -44,7 +43,12 @@ const Toprated = () => {
           <span>genres</span> -{highestRatingShow[0]?.show?.genres.join(",")}
         </p>
         <button className="button-2 p-3">
-          <Link to={highestRatingShow[0]?.show?.url}>Play Now</Link>
+          <Link
+            to={highestRatingShow[0]?.show?.url}
+            style={{ color: "black" }}
+          >
+            Play Now
+          </Link>
         </button>
       </div>
     </Container>
