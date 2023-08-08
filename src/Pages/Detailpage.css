@@ -1,0 +1,24 @@
+.movie-detail {
+    height: 80vh;
+    padding: 40px 0;
+    color: #fff;
+  }
+  
+  .poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Add styling for background image */
+  .movie-detail {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .Container_card{
+    position: relative;
+    top: 90%;
+  }
+
+  .Card_text>h2{
+    border-bottom: 2px solid #e40813;
+  }
