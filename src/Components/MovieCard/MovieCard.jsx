@@ -5,7 +5,6 @@ import "./MovieCard.css";
 const MovieCard = () => {
   const { filterData, Showdetail, searchfilter, setSearch } =
     useContext(Moviedata);
-
   return (
     <>
       <h1

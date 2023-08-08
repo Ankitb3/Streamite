@@ -17,7 +17,7 @@ const Context = ({ children }) => {
   });
 
   const searchfilter = filterData.filter((searchitem) => {
-    if (searchitem.show.name == modifiedString || search) return searchitem;
+    if (searchitem.show.name == modifiedString) return searchitem;
   });
   const [detail, setDetail] = useState([]);
   const navigate = useNavigate();
