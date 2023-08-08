@@ -3,7 +3,7 @@ import { Moviedata } from "../Context/Context";
 import { useContext } from "react";
 import "./MovieCard.css";
 const MovieCard = () => {
-  const { filterData } = useContext(Moviedata);
+  const { filterData, Showdetail } = useContext(Moviedata);
 
   return (
     <>
@@ -48,7 +48,9 @@ const MovieCard = () => {
                   : "00:00"}
                 min
               </h4>
-              <button className="button-2">Watch</button>
+              <button className="button-2" onClick={() => Showdetail(data)}>
+                Watch
+              </button>
             </Card.Body>
           </Card>
         ))}

@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { Moviedata } from "../Context/Context";
 import { Container } from "react-bootstrap";
 import "./Toprated.css";
+import { Link } from "react-router-dom";
 const Toprated = () => {
   const { filterData } = useContext(Moviedata);
-  console.log("top", filterData);
   const highestRatingShow = filterData.filter((item) => {
     return item.show.rating.average > 8;
   });
-
+  console.log(highestRatingShow[0].show.url);
   const removetag = highestRatingShow[0]?.show?.summary
     .replace(/<[^>]*>/g, "")
     .slice(0, 80);
@@ -32,7 +32,8 @@ const Toprated = () => {
         <h2>{highestRatingShow[0]?.show?.name}</h2>
         <p className="fs-4">{removetag}.</p>
         <p className="fs-4">
-          <span>Rating</span> -⭐⭐⭐⭐{highestRatingShow[0]?.show?.rating.average}{" "}
+          <span>Rating</span> -⭐⭐⭐⭐
+          {highestRatingShow[0]?.show?.rating.average}
         </p>
 
         <p className="fs-4">
@@ -42,7 +43,9 @@ const Toprated = () => {
         <p className="fs-4">
           <span>genres</span> -{highestRatingShow[0]?.show?.genres.join(",")}
         </p>
-        <button className="button-2 p-3">Watch</button>
+        <button className="button-2 p-3">
+          <Link to={highestRatingShow[0]?.show?.url}>Play Now</Link>
+        </button>
       </div>
     </Container>
   );
